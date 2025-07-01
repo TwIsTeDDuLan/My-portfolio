@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="Styles\home.css" rel="stylesheet">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@300..700&family=Plaster&display=swap" rel="stylesheet">
+
+    <title>My Portfolio</title>
+</head>
+<body>
+    <section id="home">
+        <div class="artistic-container">
+            <h1 class="left">Hi! I'm DULAN</h1>
+            <h2 class="right">Robotics<br>Enthuthias</h2>
+            <div class="me">
+                <img src="Assets/dyln2.png" alt="Side-View">
+                <img src="Assets/dyln3.png" alt="front-View">
+            </div>
+        </div>
+    </section>
+
+    <section id="skils">
+        
+    </section>
+
+    <script>
+        window.addEventListener('scroll', function() {
+            const home = document.getElementById('home');
+            const skills = document.getElementById('skils');
+            const frontImg = document.querySelector('.front-img');
+            const sideImg = document.querySelector('.side-img');
+            const homeRect = home.getBoundingClientRect();
+
+            // When the bottom of #home is near the top of the viewport, start transition
+            if (homeRect.bottom < window.innerHeight * 0.7) {
+                frontImg.style.opacity = 1;
+                sideImg.style.opacity = 0;
+            } else {
+                frontImg.style.opacity = 0;
+                sideImg.style.opacity = 1;
+            }
+        });
+    </script>
+</body>
+</html>

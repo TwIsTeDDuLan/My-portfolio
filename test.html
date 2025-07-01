@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="Styles/home.css" rel="stylesheet">
+    <title>My Portfolio</title>
+    <style>
+        html {
+            scroll-behavior: smooth;
+        }
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+        }
+        nav {
+            position: fixed;
+            width: 100%;
+            background: #222;
+            color: #fff;
+            top: 0;
+            left: 0;
+            z-index: 1000;
+        }
+        nav ul {
+            list-style: none;
+            margin: 0;
+            padding: 1em;
+            display: flex;
+            justify-content: center;
+            gap: 2em;
+        }
+        nav a {
+            color: #fff;
+            text-decoration: none;
+            font-weight: bold;
+        }
+        section {
+            min-height: 100vh;
+            padding: 5em 2em 2em 2em;
+        }
+        #home { background: #f5f5f5; }
+        #about { background: #e0e0e0; }
+        #projects { background: #d0d0d0; }
+        #contact { background: #c0c0c0; }
+    </style>
+</head>
+<body>
+    <nav>
+        <ul>
+            <li><a href="#home">Home</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#projects">Projects</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+    </nav>
+
+    <section id="home">
+        <h1>Welcome to My Portfolio</h1>
+        <p>Short intro about yourself.</p>
+    </section>
+    <section id="about">
+        <h2>About Me</h2>
+        <p>Write something about your background, skills, and interests.</p>
+    </section>
+    <section id="projects">
+        <h2>Projects</h2>
+        <p>Showcase your work here.</p>
+    </section>
+    <section id="contact">
+        <h2>Contact</h2>
+        <p>How can people reach you?</p>
+    </section>
+</body>
+</html>
