@@ -17,8 +17,7 @@
             <h1 class="left">Hi! I'm DULAN</h1>
             <h2 class="right">Robotics<br>Enthuthias</h2>
             <div class="me">
-                <img src="Assets/dyln2.png" alt="Side-View">
-                <img src="Assets/dyln3.png" alt="front-View">
+                <img src="Assets/dyln2.png" alt="Side-View" class="side-img">
             </div>
         </div>
     </section>
@@ -26,24 +25,5 @@
     <section id="skils">
         
     </section>
-
-    <script>
-        window.addEventListener('scroll', function() {
-            const home = document.getElementById('home');
-            const skills = document.getElementById('skils');
-            const frontImg = document.querySelector('.front-img');
-            const sideImg = document.querySelector('.side-img');
-            const homeRect = home.getBoundingClientRect();
-
-            // When the bottom of #home is near the top of the viewport, start transition
-            if (homeRect.bottom < window.innerHeight * 0.7) {
-                frontImg.style.opacity = 1;
-                sideImg.style.opacity = 0;
-            } else {
-                frontImg.style.opacity = 0;
-                sideImg.style.opacity = 1;
-            }
-        });
-    </script>
 </body>
 </html>
