@@ -83,15 +83,27 @@
             position: relative;
             /* Glowing white effect */
             filter: drop-shadow(0 0 4px white) drop-shadow(0 0 8px white);
-            animation: glowPulse 2s infinite alternate;
+            animation: glowPulse 1s infinite alternate;
         }
         
         @keyframes glowPulse {
             0% {
-                filter: drop-shadow(0 0 2px white) drop-shadow(0 0 4px white);
+                filter: drop-shadow(5px 0 0 white) drop-shadow(0 0 4px white);
+            }
+            20% {
+                filter: drop-shadow(0 5px 0 white) drop-shadow(0 0 4px white);
+            }
+            40% {
+                filter: drop-shadow(0 0 5px white) drop-shadow(0 0 4px white);
+            }
+            60% {
+                filter: drop-shadow(0 5px 0 white) drop-shadow(0 0 4px white);
+            }
+            80% {
+                filter: drop-shadow(5px 0 0 white) drop-shadow(0 0 8px white);
             }
             100% {
-                filter: drop-shadow(0 0 4px white) drop-shadow(0 0 8px white);
+                filter: drop-shadow(0 5px 0 white) drop-shadow(0 0 8px white);
             }
         }
         
@@ -125,7 +137,7 @@
             padding: 2rem;
             border-radius: 10px;
             max-width: 1200px;
-            margin: 0 auto;
+            margin: 0 0;
         }
         
         /* Rest of the styles (same as before) */
@@ -135,8 +147,12 @@
             position: relative;
             display: inline-block;
         }
+
+        u {
+            height: 2px;
+        }
         
-        h2::after {
+        /* h2::after {
             content: '';
             position: absolute;
             bottom: -10px;
@@ -144,7 +160,7 @@
             width: 100%;
             height: 2px;
             background: white;
-        }
+        } */
         
         p {
             font-size: 1.2rem;
