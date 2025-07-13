@@ -227,22 +227,19 @@
 
         .intro-description {
             position: absolute;
-            left: 50%;
-            bottom: 100%;
-            transform: translateX(-50%) translateY(-20px);
-            width: 18vw;
+            left: 5%; /* Position to the left side */
+            top: 25%; /* Below the "Hi! I'm Dulan" heading */
+            width: 30vw; /* Reasonable width */
+            max-width: 1000px; /* Prevent too wide on large screens */
             font-family: 'JetBrains Mono', 'IBM Plex Mono', monospace;
-            font-size: 1.15vw;
+            font-size: 0.9rem;
             color: #e0e0e0;
             background: rgba(0,0,0,0.55);
-            padding: 1.2rem 2rem;
+            padding: 1.5rem;
             border-radius: 10px;
-            z-index: 1;
-            box-shadow: 0 2px 12px rgba(0,0,0,0.15);
+            z-index: 2;
             line-height: 1.7;
-            cursor: pointer;
-            text-align: left;
-            }
+        }
             @media screen and (max-width: 768px) {
             .intro-description {
                 width: 80vw;
@@ -300,7 +297,7 @@
             /* Glowing white effect */
             filter: drop-shadow(0 0 4px white) drop-shadow(0 0 8px white);
             animation: glowPulse 1s infinite alternate;
-            margin-left: 40%;
+            margin-left: 20%;
         }
         
         @keyframes glowPulse {
