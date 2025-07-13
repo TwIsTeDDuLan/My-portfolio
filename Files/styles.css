@@ -538,7 +538,7 @@
             background-repeat: no-repeat; /* Prevents tiling */
         }
 
-        @media screen {
+        @media screen and (max-width: 768px) {
             #connect {
             padding: 5rem 10%;
             padding-bottom: 0;
