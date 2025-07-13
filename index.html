@@ -1,26 +1,43 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <link rel="icon" type="image/png" href="Assets/LogoPNG.png">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Minimal Portfolio</title>
+    <title>Thulana Dulan Jeewantha</title>
 
     <link rel="stylesheet" href="Files/styles.css">
     <script src="Files/scripts.js" defer></script>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@300..700&family=Plaster&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Arizonia&family=IBM+Plex+Mono:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&family=JetBrains+Mono:ital,wght@0,100..800;1,100..800&family=Orbitron:wght@400..900&display=swap" rel="stylesheet">
 </head>
 <body>
+    <!-- Navigation Bar -->
+    <nav class="navbar">
+        <div class="navbar-logo">
+            DULAN
+        </div>
+        <ul class="navbar-links">
+            <li><a href="#home">Home</a></li>
+            <li><a href="#skills-projects">Skills & Projects</a></li>
+            <li><a href="#connect">Connect</a></li>
+        </ul>
+    </nav>
     <!-- Background images for parallax effect -->
-    <div class="parallax-bg" id="side-bg" style="background-image: url('/Assets/dyln3.png');"></div>
-    <div class="parallax-bg" id="front-bg" style="background-image: url('/Assets/dyln2.png');"></div>
+    <div class="parallax-bg" id="side-bg" style="background-image: url('/Assets/dyln2.png');"></div>
+    <!-- <div class="parallax-bg" id="front-bg" style="background-image: url('/Assets/dyln3.png');"></div> -->
     
     <!-- Your Intro Section -->
     <section id="home">
         <div class="artistic-container">
-            <h1 class="left">Hi! I'm DULAN</h1>
-            <h2 class="right">Robotics<br>Enthusiast</h2>
+            <h1 class="left ibm-plex">Hi! I'm DULAN</h1>
+            <div class="intro-description">
+                🚀 A curious mind at the intersection of machines and code.<br><br>
+                I'm Dulan, a computer science undergraduate at <b><a href="https://www.sjp.ac.lk/">University of Sri Jayawardhenepura</a></b> with a passion for building, breaking, and understanding things—especially when they're moving. From pathfinding robots to real-time tracking systems, I thrive on transforming abstract ideas into functional systems. Whether it's tweaking hardware or experimenting with Firebase and React, I'm always chasing the next problem to solve.<br><br>
+                Currently diving deep into robotics, embedded systems, and the occasional blockchain experiment, I love exploring how tech can be both intuitive and impactful. Let's build the future—one sensor, line of code, and servo at a time.
+            </div>
+            <h3 class="right orbitron">Robotics<br>Enthusiast</h3>
             <div class="me">
                 <img src="/Assets/dyln3.png" alt="Side-View" class="side-img">
             </div>
@@ -31,9 +48,8 @@
     <!-- Skills & Projects Section -->
     <section id="skills-projects">
         <div class="skills-content">
-            <h2><u>Skills & Projects</u></h2>
+            <h2>Skills & Projects</h2>
             <p>My professional journey through skills acquired and projects completed.</p>
-            
             <div class="timeline">
                 <div class="container left-timeline">
                     <div class="content">
@@ -41,21 +57,18 @@
                         <p>Earned 6As including <b>Mathamatics, Science, ICT, and Bussiness Studies</b> with 3Bs</p>
                     </div>
                 </div>
-                
                 <div class="container right-timeline">
                     <div class="content">
                         <h3><u>G.C.E A/L</u></h3>
                         <p><b>A - Combined Mathamatics<br>A - Chemistry<br>C - Physics</b></p>
                     </div>
                 </div>
-                
                 <div class="container left-timeline">
                     <div class="content">
                         <h3><u>Infinite Folder Virus</u></h3>
                         <p>Dived into the <b>cyber</b> security field where I prototyped a file multiplyer virus using <b>Python</b>.</p>
                     </div>
                 </div>
-                
                 <div class="container right-timeline">
                     <div class="content">
                         <h3><u>NFT Yathra</u></h3>
@@ -63,26 +76,51 @@
                         with <b>Firebase</b> as the backend using <b>Cardano Blockchain</b>.</p>
                     </div>
                 </div>
-                
                 <div class="container left-timeline">
                     <div class="content">
                         <h3><u>Study Nest</u></h3>
                         <p>A website that allows university students to access to the past lessons and Kuppi lessons. Where we used <b>HTML, CSS, Java Script</b> as the Front-End and <b>PHP</b> as the Back-End logics.</p>
                     </div>
                 </div>
-
                 <div class="container right-timeline">
                     <div class="content">
                         <h3><u>LineFollower, Obstracle Avoider Robo</u></h3>
                         <p>Steped into the robotics by building a <b>Line Following, Obstracle Avoiding Rot</b> that utilizes 4 motor controll and driven on IR sensor, Encodor, and Ultrasonic Sensor feed back.</p>
                     </div>
                 </div>
-                
                 <div class="container left-timeline">
                     <div class="content">
                         <h3><u>Twisted Bot</u></h3>
                         <p>Me and my team started diving into the robotics where we building a <b>Micro Mouse</b> which Explore Mazes and solves to initially participate in <b>Micromaze 2.0</b>.</p>
                     </div>
+                </div>
+            </div>
+            <!-- Overall Skills Meter -->
+            <div class="skills-meter">
+                <h3 class="skills-meter-title">Overall Skills</h3>
+                <div class="meter-group">
+                    <div class="meter-label">C/C++</div>
+                    <div class="meter-bar"><div class="meter-fill" style="width: 80%">80%</div>
+                </div>
+                <div class="meter-group">
+                    <div class="meter-label">Python</div>
+                    <div class="meter-bar"><div class="meter-fill" style="width: 90%">90%</div>
+                </div>
+                <div class="meter-group">
+                    <div class="meter-label">Java</div>
+                    <div class="meter-bar"><div class="meter-fill" style="width: 60%">60%</div>
+                </div>
+                <div class="meter-group">
+                    <div class="meter-label">Communication Skills</div>
+                    <div class="meter-bar"><div class="meter-fill" style="width: 70%">70%</div></div>
+                </div>
+                <div class="meter-group">
+                    <div class="meter-label">Teamwork</div>
+                    <div class="meter-bar"><div class="meter-fill" style="width: 95%">95%</div></div>
+                </div>
+                <div class="meter-group">
+                    <div class="meter-label">Problem Solving</div>
+                    <div class="meter-bar"><div class="meter-fill" style="width: 90%">90%</div></div>
                 </div>
             </div>
         </div>
@@ -94,19 +132,30 @@
         <p>Feel free to reach out through any of these platforms.</p>
         
         <div class="social-icons">
-            <div class="social-icon github" 
-                 data-preview="/Assets/GitHub.png"></div>
+            <a href="https://github.com/your-github-username" target="_blank" rel="noopener">
+                <div class="social-icon github" 
+                     data-preview="/Assets/GitHub.png"></div>
+            </a>
+            <a href="https://www.linkedin.com/in/thulana-dulan-jeewantha-amaranath-56a39226b/" target="_blank" rel="noopener">
             <div class="social-icon linkedin" 
                  data-preview="/Assets/LinkedIn.png"></div>
+            </a>
+            <a href="https://www.facebook.com/TwIsteDDulan/" target="_blank" rel="noopener">
             <div class="social-icon facebook" 
                  data-preview="/Assets/FaceBookProfile.png"></div>
-            <div class="social-icon whatsapp" 
-                 data-preview="/Assets/WhatsApp.png"></div>
-            <div class="social-icon discord" 
-                 data-preview="https://example.com/discord-screenshot.jpg"></div>
+            </a>
+            <a href="https://wa.me/+94705170264" target="_blank" rel="noopener">
+                <div class="social-icon whatsapp" 
+                     data-preview="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg"></div>
+            </a>
+            <a href="#" class="copy-email" rel="noopener">
+                <div class="social-icon gmail" data-preview="https://upload.wikimedia.org/wikipedia/commons/4/4e/Gmail_Icon.png"></div>
+            </a>
         </div>
         
-        <div class="profile-preview"></div>
+        <div class="contact-logo">
+            <img src="/Assets/LogoPNG.png" alt="Logo" class="site-logo">
+        </div>
     </section>
     <footer>
         <p>&copy; 2023 Dulan. All rights reserved.</p>

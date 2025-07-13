@@ -32,29 +32,21 @@ const containers = document.querySelectorAll('.container');
         });
         
         // Background image transition effect
-        const sideBg = document.getElementById('side-bg');
-        const frontBg = document.getElementById('front-bg');
-        const skillsSection = document.getElementById('skills-projects');
-        
-        sideBg.classList.remove('active'); // Show side image initially
-        
-        const bgObserver = new IntersectionObserver((entries) => {
-            entries.forEach(entry => {
-                if (entry.isIntersecting) {
-                    // When skills section comes into view
-                    sideBg.classList.remove('active');
-                    frontBg.classList.add('active');
-                } else {
-                    // When skills section leaves view
-                    sideBg.classList.add('active');
-                    frontBg.classList.remove('active');
-                }
-            });
-        }, {
-            threshold: 0.3
-        });
-        
-        bgObserver.observe(skillsSection);
+const sideBg = document.getElementById('side-bg');
+const skillsSection = document.getElementById('skills-projects');
+sideBg.classList.remove('active'); // Hide initially
+const bgObserver = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+        if (entry.isIntersecting) {
+            sideBg.classList.add('active'); // Show when skills section is in view
+        } else {
+            sideBg.classList.remove('active'); // Hide otherwise
+        }
+    });
+}, {
+    threshold: 0.24
+});
+bgObserver.observe(skillsSection);
         
         // Scroll indicator disappears when at bottom
         window.addEventListener('scroll', () => {
@@ -65,3 +57,30 @@ const containers = document.querySelectorAll('.container');
                 scrollIndicator.style.opacity = '1';
             }
         });
+
+
+document.addEventListener('DOMContentLoaded', function() {
+                const email = "thualanadj@gmail.com";
+                const copyEmailBtn = document.querySelector('.copy-email');
+                copyEmailBtn.addEventListener('click', function(e) {
+                    e.preventDefault();
+                    navigator.clipboard.writeText(email).then(function() {
+                        // Create popup message
+                        const popup = document.createElement('div');
+                        popup.textContent = "Email copied to clipboard!";
+                        popup.style.position = "fixed";
+                        popup.style.bottom = "30px";
+                        popup.style.left = "50%";
+                        popup.style.transform = "translateX(-50%)";
+                        popup.style.background = "#333";
+                        popup.style.color = "#fff";
+                        popup.style.padding = "10px 20px";
+                        popup.style.borderRadius = "5px";
+                        popup.style.zIndex = "9999";
+                        document.body.appendChild(popup);
+                        setTimeout(function() {
+                            popup.remove();
+                        }, 2000);
+                    });
+                });
+            });
