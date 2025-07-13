@@ -531,8 +531,11 @@
             padding: 5rem 10%;
             padding-bottom: 0;
             position: relative;
-            text-align: center;
-            align-content: center;
+            text-align: center; /* Centers text/content */
+            background-image: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url('../Assets/dyln3.png');
+            background-size: contain; /* Ensures full image visibility */
+            background-position: left center; /* Locks image to the left */
+            background-repeat: no-repeat; /* Prevents tiling */
         }
         
         .social-icons {
