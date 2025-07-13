@@ -539,10 +539,11 @@
         }
 
         @media screen {
+            #connect {
             padding: 5rem 10%;
             padding-bottom: 0;
             position: relative;
-            text-align: center;
+            text-align: center;}
         }
         
         .social-icons {
