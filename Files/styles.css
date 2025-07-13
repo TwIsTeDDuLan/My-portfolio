@@ -537,6 +537,13 @@
             background-position: left center; /* Locks image to the left */
             background-repeat: no-repeat; /* Prevents tiling */
         }
+
+        @media screen {
+            padding: 5rem 10%;
+            padding-bottom: 0;
+            position: relative;
+            text-align: center;
+        }
         
         .social-icons {
             display: flex;
