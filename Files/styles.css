@@ -246,6 +246,31 @@
             text-decoration: none;
             color: #e0e0e0;
         }
+
+        @media screen and (max-width: 768px) {
+        .intro-description {
+            top: 45%;
+            left: 5%;
+            right: 5%;
+            max-width: 90vw;
+            font-size: 3.5vw;
+            padding: 1rem;
+            line-height: 1.5;
+        }
+        }
+
+        @media screen and (max-width: 768px) {
+        .left {
+            font-size: 6vw;
+            top: 5%;
+        }
+        
+        .right {
+            font-size: 8vw;
+            top: 80%;
+            text-align: right;
+        }
+        }
         
         .right {
             position: absolute;
